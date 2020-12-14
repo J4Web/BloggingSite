@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 0;
+    color: grey;
+    background: rgb(10, 8, 8);
+    padding: 1rem;
+    font-size: 2.6rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border: 1px black solid;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+#search {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.head {
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+input {
+    width: 25rem;
+    height: 1.86rem;
+    border: 1.4px solid black;
+}
+
+form.Search input[type=text] {
+    padding: 10px;
+    font-size: 1.22rem;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    margin-top: 40px;
+
+}
+
+.btnSearch {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    background: #2196F3;
+    cursor: pointer;
+    color: white;
+    width: 4rem;
+    height: 2rem;
+    font-size: 17px;
+    border: 1px solid black;
+
+}
+
+.btnSearch:hover {
+    background: #0b7dda;
+}
+
+#Secsearch {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 6.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(56, 171, 216);
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    margin: 2.8rem;
+}
+
+small,
+span {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 1.0rem
+}
+
+article {
+    margin-left: 3.3%;
+    padding-top:1rem ;
+}
+
+.postTag {
+    position: absolute;
+    padding: 0 0.52rem;
+    border-radius: .25em 0 0 .25em;
+    border-right: none;
+    border: 2px solid black;
+}
