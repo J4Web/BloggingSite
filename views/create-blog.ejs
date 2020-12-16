@@ -1,0 +1,27 @@
+<%-include("./includes/header")%>
+<!---->
+<%-include("./includes/nav")%>
+<body>
+    <form class="form">
+        <p type="Name:"><input class="title" placeholder="Title"></input></p>
+
+        <div>
+            <label for="tag">
+                <h2> Choose Tag<h2>
+            </label>
+            <select id="blogTags">
+                <option value="Javascript">Javascript</option>
+                <option value="React">React</option>
+                <option value="Express">Express</option>
+                <option value="Gatsby">Gatsby</option>
+                <option value="Nodejs">Nodejs</option>
+            </select>
+        </div>
+        <br>
+        <textarea class="post" name="post" rows="13" placeholder="Start typing..."></textarea>
+
+        <div><button class="btn" type="submit">Submit</button></div>
+    </form>
+</body>
+<!-- Search Section-->
+<%-include("./includes/footer")%>
