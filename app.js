@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+//connecting our DB
+require('./models/db');
+
 // importing routes
 const HomeRoute = require("./routes/home.route");
 
@@ -12,6 +15,8 @@ app.set("view engine", "ejs");
 
 // setting up routes
 app.use("/", HomeRoute);
+
+
 
 // server
 app.listen(8080, () => {

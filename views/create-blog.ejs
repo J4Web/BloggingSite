@@ -1,0 +1,27 @@
+<%-include("./includes/header")%>
+<!---->
+<%-include("./includes/nav")%>
+<form class="form" method="POST">
+  <div class="input-wrapper">
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Blog Title" required  autocomplete="off"  autofocus/>
+  </div>
+  <div class="input-wrapper">
+    <label>Tag</label>
+    <select name="tag">
+      <option value="Javascript">Javascript</option>
+      <option value="React">React</option>
+      <option value="Express">Express</option>
+      <option value="Gatsby">Gatsby</option>
+      <option value="Nodejs">Nodejs</option>
+    </select>
+  </div>
+  <div class="input-wrapper">
+    <label>Content</label>
+    <textarea rows="5" name="content" placeholder="Content"></textarea>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Search Section-->
+<%-include("./includes/footer")%>
