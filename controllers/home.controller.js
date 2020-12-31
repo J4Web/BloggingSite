@@ -5,3 +5,4 @@ exports.getHome = (req, res, next) => {
 exports.getCreate = (req, res, next) => {
   res.render("create-blog", { title: "Create Blog" });
 };
+
