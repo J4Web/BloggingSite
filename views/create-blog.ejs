@@ -1,10 +1,10 @@
 <%-include("./includes/header")%>
 <!---->
 <%-include("./includes/nav")%>
-<form class="form" method="POST">
+<form action="/create" class="form" method="POST">
   <div class="input-wrapper">
     <label>Title</label>
-    <input type="text" name="title" placeholder="Blog Title" required />
+    <input type="text" name="title" placeholder="Blog Title" required  autocomplete="off"  autofocus/>
   </div>
   <div class="input-wrapper">
     <label>Tag</label>
