@@ -7,38 +7,22 @@ route.get("/", controller.getHome);
 
 route.get("/create", controller.getCreate);
 
-route.post('/create',(req,res)=>
-{
-    // const title= req.body.title;
-    // const tag=req.body.tag;
-    // const content=req.body.Content;
-    // console.log(title);
-    // console.log(tag);
-    // console.log(content);
-    insertRecord(req,res);
+route.post('/create', async (req,res) =>{
+
+    const {title,tag,content} = req.body;
+    try{
+        const post = await new Post({title,tag,content })
+        if(post){
+            res.redirect('/')
+        }else{
+            console.log('Failed to save the blog')
+            res.redirect('/create')
+        }
+    }catch(err){
+        console.log(err)
+    }
 });
 
-
-
-const insertRecord = (req, res) => 
-{
-    const post = new Post();
-
-    post.Title = req.body.Title;
-    
-    post.Tag = req.body.Tag;
-
-    post.Content = req.body.Content;
-
-    post.save((err, doc) => {
-        console.log(doc);
-        if (!err) {
-            res.redirect('/list');
-        } else {
-            console.log('Error during record Insertion : ' + err);
-        }
-    });
-};
 route.get('/list',(req, res)=>
 {
     return res.json('Here in the List');

@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 //connecting our DB
-require('./models/db');
+require('./utils/db');
 
 //setting Body-Parser
 const bodyParser= require('body-parser');

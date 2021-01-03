@@ -3,20 +3,18 @@ const mongoose= require('mongoose');
 
 const BlogSchema= new mongoose.Schema({
 //Schema of post goes here
-    Title : 
+    title : 
     {
         type: String,
     },
-    Tag :
+    tag :
     {
         type:String
     },
-    Content: {
+    content : {
         type: String
     }
 
 });
 
-mongoose.model('Blog', BlogSchema);
-
-model.exports= mongoose.model('Blog', BlogSchema);
+module.exports= mongoose.model('Blog', BlogSchema);

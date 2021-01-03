@@ -1,7 +1,7 @@
 //jshint esversion:6
-const mongoose =require('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/BlogsDB', { useNewUrlParser:true}, (err)=>
+mongoose.connect('mongodb://localhost:27017/BlogsDB', { useNewUrlParser:true, useUnifiedTopology:true}, (err)=>
 {
     if(!err)
     {
@@ -14,4 +14,4 @@ mongoose.connect('mongodb://localhost:27017/BlogsDB', { useNewUrlParser:true}, (
 });
 
 
-require('./blogs.model');
+require('../models/blogs.model');
