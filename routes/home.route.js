@@ -1,8 +1,8 @@
 const route = require("express").Router();
 const controller = require("../controllers/home.controller");
+const Post= require('../models/blogs.model');
 const mongoose= require('mongoose');
-// @ts-ignore
-const Post=mongoose.model('Blog');
+
 route.get("/", controller.getHome);
 
 route.get("/create", controller.getCreate);
@@ -20,30 +20,29 @@ route.post('/create',(req,res)=>
 
 
 
-const insertRecord=( req,res)=>
+const insertRecord = (req, res) => 
 {
-    var post = new Post();
-    post.Title= req.body.Title;
-    post.Tag= req.body.Tag;
-    post.Content= req.body.Content;
+    const post = new Post();
 
+    post.Title = req.body.Title;
+    
+    post.Tag = req.body.Tag;
 
+    post.Content = req.body.Content;
 
-    post.save((err,doc)=>
-    {
-        if(!err)
-        {
+    post.save((err, doc) => {
+        console.log(doc);
+        if (!err) {
             res.redirect('/list');
-        }
-        else{
-            console.log('Error during record Insertion : '+ err);
+        } else {
+            console.log('Error during record Insertion : ' + err);
         }
     });
-
-route.get('/list',()=>
+};
+route.get('/list',(req, res)=>
 {
-    res.json('Here in the List');
+    return res.json('Here in the List');
 });
 
-};
+
 module.exports = route;

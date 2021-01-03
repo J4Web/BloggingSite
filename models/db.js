@@ -1,7 +1,7 @@
 //jshint esversion:6
 const mongoose =require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/ArticlesDB', { useNewUrlParser:true}, (err)=>
+mongoose.connect('mongodb://localhost:27017/BlogsDB', { useNewUrlParser:true}, (err)=>
 {
     if(!err)
     {
