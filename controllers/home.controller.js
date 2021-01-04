@@ -1,16 +1,10 @@
-const Post = require('../models/blogs.model');
-const mongoose = require('mongoose');
-exports.getHome = (req, res, next) => {
-  Post.find({}, (err, blog) => {
-    res.render('blogs', {
-      blog: blog
+const Blog = require('../models/blogs.model');
 
-    });
-  })
-};
-
-exports.getCreate = (req, res, next) => {
-  res.render("create-blog", {
-    title: "Create Blog"
-  });
+exports.getHome = async(req, res, next) => {
+  try{
+    const blogs = await Blog.find();
+    res.render('blogs',{blogs})
+  }catch(err){
+    console.log(err)
+  }
 };
