@@ -1,8 +1,8 @@
 <%-include("./includes/header")%>
 <!---->
 <%-include("./includes/nav")%>
-
 <div class="blogs-wrapper">
+
   <div class="blog-card">
     <a href=""><h2>Responsive CSS Grid</h2></a>
     <span>December 1, 2020</p>
@@ -13,7 +13,30 @@
       <p>Creating a responsive video or iframe that maintains its aspect ratio in CSS is much trickier than you may think.</p>
     </div>
   </div>
-</div>
 
+  //pulling from DB
+  <%blog.forEach(blog=> {%>
+    <div class="blog-card">
+    <a href=""><h2><%= blog.title %></h2></a>
+    <span>December 1, 2020</p>
+    <div class="tags">
+      <a href=""><%= blog.tag %></a></a>
+    </div>
+    <div class="content">
+      <p><%= blog.content %></p>
+    </div>
+  </div>
+  <%})%>
+  <!-- <div class="blog-card">
+    <a href=""><h2>Responsive CSS Grid</h2></a>
+    <span>December 1, 2020</p>
+    <div class="tags">
+      <a href="">CSS</a>
+    </div>
+    <div class="content">
+      <p>Creating a responsive video or iframe that maintains its aspect ratio in CSS is much trickier than you may think.</p>
+    </div>
+  </div> -->
+</div>
 <!-- Search Section-->
 <%-include("./includes/footer")%>

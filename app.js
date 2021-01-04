@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 //connecting our DB
-require('./utils/db');
+require('./models/db');
 
 //setting Body-Parser
 const bodyParser= require('body-parser');
@@ -21,7 +21,6 @@ app.set("view engine", "ejs");
 
 // setting up routes
 app.use("/", HomeRoute);
-
 
 // server
 app.listen(8080, () => {
