@@ -1,10 +1,20 @@
+//jshint esversion:6
 const mongoose= require('mongoose');
 
-const blogsSchema= new mongoose.Schema({
+const BlogSchema= new mongoose.Schema({
 //Schema of post goes here
+    title : 
+    {
+        type: String,
+    },
+    tag :
+    {
+        type:String
+    },
+    content : {
+        type: String
+    }
 
+});
 
-
-})
-
-mongoose.model('Blog', blogsSchema);
+module.exports= mongoose.model('Blog', BlogSchema);
