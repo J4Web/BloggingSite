@@ -1,9 +1,10 @@
+const Blog = require('../models/blogs.model');
 
-exports.getHome = (req, res, next) => {
-  res.render("blogs", { title: "Blog Page" });
+exports.getHome = async(req, res, next) => {
+  try{
+    const blogs = await Blog.find();
+    res.render('blogs',{blogs})
+  }catch(err){
+    console.log(err)
+  }
 };
-
-exports.getCreate = (req, res, next) => {
-  res.render("create-blog", { title: "Create Blog" });
-};
-
