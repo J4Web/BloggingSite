@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 //connecting our DB
-require('./utils/db')
+require('./utils/db');
 
 //setting Body-Parser
 const bodyParser= require('body-parser');
@@ -22,9 +22,9 @@ app.set("view engine", "ejs");
 
 // setting up routes
 app.use("/", HomeRoute);
-app.use("/admin", AdminRoute)
+app.use("/admin", AdminRoute);
 
 // server
-app.listen(8080, () => {
+app.listen(3000, () => {
   console.log("Running on port 8080!");
 });
