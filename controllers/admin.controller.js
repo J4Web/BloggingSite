@@ -3,16 +3,17 @@ const Blog = require("../models/blogs.model");
 
 exports.AdminLogin=(req,res,next)=>
 {
-  res.render("admin-login", {
+  res.render("admin/admin-login", {
       title: "Create Blog",
   });
 };
 
 exports.getCreate = (req, res, next) => {
-  res.render("create-blog", {
+  res.render("admin/create-blog", {
     title: "Create Blog",
   });
 };
+
 exports.postCreate = (req, res, next) => {
   const { title, tag, content } = req.body;
   try {

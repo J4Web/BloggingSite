@@ -1,91 +1,71 @@
-
-.contain-login{
-  margin: 0;
-  padding: 0;
+.login-wrapper{
   font-family: sans-serif;
   background-color: #ccc;
-}
-.login-box{
-  width: 280px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: white;
-}
-.login-box h1{
-  float: left;
-  font-size: 40px;
-  border-bottom: 6px;
-  border-bottom: double #3498db;
-
-  margin-bottom: 50px;
-  padding: 13px 0;
-}
-.textbox{
-  width: 100%;
-  overflow: hidden;
-  font-size: 20px;
-  padding: 8px 0;
-  margin: 8px 0;
-  border-bottom: 1px solid #3498db;
-}
-.textbox i{
-  width: 26px;
-  float: left;
-  text-align: center;
-}
-.textbox input{
-  border: none;
-  outline: none;
-  background: none;
-  color: white;
-  font-size: 18px;
-  width: 80%;
-  float: left;
-  margin: 0 10px;
-}
-.button{
-  width: 100%;
-  background-color: #3498db;
-  border: 2px solid #3498db;
-  color: white;
-  padding: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 12px 0;
-}
-
-.button:active ,
-.button:hover{
-  background-color:#206fa3;
-
-}
-
-.check{
-  background-color: grey;
-  
-}
-
-.header-login {
-  background-color: #262b2e;
-  color: #fff;
-
-  padding: 1rem;
-  margin-top:0;
-
-  font-family: 
-    sans-serif;
-  text-align: center;
-
-
-}
-@media screen and (max-width: 600px) {
-  #set {
+  height: 100vh;
+  position: relative;
+  header{
+    background-color: #262b2e;
+    color: #fff;
+    padding: 0.5rem 0;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  form{
     position: absolute;
-    
-    margin-top:50%;
-    margin-left: 50%;
-    margin-bottom: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 800px;
+    width: 40%;
+    margin: auto;
+    .input-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      input{
+        margin-left: 1rem;
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.5rem;
+        outline: none;
+        border: none;
+      }
+      i{
+        font-size: 1.5rem !important;
+        color: #206fa3;
+      }
+    }
+    .btn-wrapper{
+      text-align: center;
+      width: 100%;
+      text-align: end;
+      button{
+        background-color: #206fa3;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 20%;
+        margin-top: 0.5rem;
+        margin-left: 1.5rem;
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media(max-width:900px){
+  .login-wrapper{
+    form{
+      width: 90%;
+    }
+    .btn-wrapper{
+      button{
+        width: 40% !important;
+        font-size: 0.8rem;
+      }
+    }
   }
 }
