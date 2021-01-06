@@ -4,8 +4,7 @@
   "description": "My first collab",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,10 @@
     "date-and-time": "^0.14.2",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "mongoose": "^5.11.9"
+    "express-session": "^1.17.1",
+    "jest": "^26.6.3",
+    "mongoose": "^5.11.9",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   }
 }
